@@ -1,0 +1,36 @@
+<html>
+   <body align="center">
+      </br></br>
+      <h3>Update the details of the Criminal</h3>
+      <form action = "/updatecriminal" method = "POST">
+         <table align="center" >
+            <tr>
+               <td>
+                  <p>Criminal ID</p>
+               </td>
+               <td><input type = "text" class="form-control" name = "criid" value = "{{data[0]}}"/></td>
+            </tr>
+            <tr>
+               <td>
+                  <p>Full Name</p>
+               </td>
+               <td><input type = "text" class="form-control" name = "criname" value = "{{data[1]}}" /></td>
+            </tr>
+            <tr>
+               <td>
+                  <p>Country</p>
+               </td>
+               <td> <input type = "text" class="form-control" name = "cricountry" value = "{{data[2]}}" /></td>
+            </tr>
+            <tr>
+               <td>
+                  <p>Crime Count</p>
+               </td>
+               <td> <input type = "text" class="form-control" name = "cricount" value = "{{data[3]}}" /></td>
+            </tr>
+         </table>
+         </br></br>
+         <input type = "submit" value = "submit" />
+      </form>
+   </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>All Criminal Data</title>
+      <style>
+         #criminals {
+         font-family: Arial, Helvetica, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+         }
+         #criminals td, #criminals th {
+         border: 1px solid #ddd;
+         padding: 8px;
+         }
+         #criminals tr:nth-child(even){background-color: #f2f2f2;}
+         #criminals tr:hover {background-color: #ddd;}
+         #criminals th {
+         padding-top: 12px;
+         padding-bottom: 12px;
+         text-align: left;
+         background-color: #04AA6D;
+         color: white;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>All criminals are here</h1>
+      <table id="criminals">
+         <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Crime Count</th>
+            <th>Update</th>
+            <th>Delete</th>
+         </tr>
+         {% for criminal in data %}
+         <tr>
+            <td>{{criminal[1]}}</td>
+            <td>{{criminal[2]}}</td>
+            <td>{{criminal[3]}}</td>
+            <td><a href="/showcriminalupdate/{{criminal[0]}}">Update</a></td>
+            <td><a href="/deletecriminal/{{criminal[0]}}">Delete</a></td>
+         </tr>
+         {% endfor %}
+      </table>
+      </br>
+      <div align="center" ><a href="/">Go Home</a></div>
+   </body>
+</html>
